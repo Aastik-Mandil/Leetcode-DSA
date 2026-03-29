@@ -12,9 +12,7 @@ public:
         for(int i=0;i<dirs.size();i++){
             int newX = r+dirs[i][0];
             int newY = c+dirs[i][1];
-            // if(canMove(grid, n, m, newX, newY, visited)){
-                traversal(grid, newX, newY, visited, n, m);
-            // }
+            traversal(grid, newX, newY, visited, n, m);
         }
     }
     int numIslands(vector<vector<char>>& grid) {
