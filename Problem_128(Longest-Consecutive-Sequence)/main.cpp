@@ -87,7 +87,15 @@ public:
 
         // return lcsT(nums);
 
-        return lcsO(nums);
+        // return lcsO(nums);
+
+        unordered_map<int, int> mp;
+        int maxi = 0;
+        for(int i=0;i<nums.size();i++){
+            mp[nums[i]] = 1+mp[nums[i]-1];
+            maxi = max(maxi, mp[nums[i]]);
+        }
+        return maxi;
     }
 };
 // PROBLEM:- https://leetcode.com/problems/longest-consecutive-sequence/description/
